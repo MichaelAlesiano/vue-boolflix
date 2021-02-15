@@ -9,6 +9,10 @@ body {
   background-color: #181818;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /* Header */
 header {
   height: 60px;
@@ -42,6 +46,41 @@ header {
   cursor: pointer;
 }
 
+.header-right {
+  position: relative;
+  justify-content: flex-end;
+}
+
+.header-right input {
+  width: 45%;
+  height: 40%;
+  padding-left: 32px;
+  padding-right: 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.header-right i.cerca {
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: 64%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.header-right i {
+  font-size: 20px;
+  color: white;
+  padding-left: 20px;
+}
+
+.header-right img {
+  height: 80%;
+  padding-left: 20px;
+}
+
 /* Main */
 .box {
   margin: auto;
@@ -56,11 +95,53 @@ header {
   width: calc(100% / 5 - 20px);
   padding-left: 20px;
   margin: 20px 0;
+  position: relative;
+}
+
+.box-film:hover .film-text {
+  visibility: visible;
+}
+
+.box-film:hover img.poster {
+  opacity: 0.1;
+  transition: .3s ease;
 }
 
 .box-film img {
-  width: 90%;
-  height: 400px;
+  width: 100%;
+  height: 450px;
   border: 1px solid black;
   cursor: pointer;
+}
+
+.film-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 15px;
+}
+
+.film-text {
+  margin: 0px 10px;
+}
+
+.film-text p:first-child {
+  padding-top: 0px;
+}
+
+.film-text p {
+  padding-top: 10px;
+}
+
+.film-text img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 10px;
+  border: none;
+}
+
+.film-text-trama {
+  height: 300px;
+  overflow-y: auto;
 }

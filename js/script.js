@@ -3,7 +3,7 @@ var app = new Vue ({
   data : {
     movies : [],
     api_key : 'e80da7051f772c008b17e92730ad435f',
-    language : '',
+    language : 'it-IT',
     query : '',
     url_img : 'https://image.tmdb.org/t/p/w342/',
   },
@@ -17,7 +17,7 @@ var app = new Vue ({
       }
     })
     .then((result) => {
-      this.movies = result.data.results
+      this.movies = result.data.results;
       console.log(this.movies);
     });
   }
