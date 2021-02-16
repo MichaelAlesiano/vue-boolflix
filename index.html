@@ -46,7 +46,7 @@
           <i class="fa fa-search cerca"></i>
           <input type="text" v-model="query" @keyup.enter='search'>
           <i class="far fa-bell"></i>
-          <img src="https://www.mobafire.com/images/avatars/yasuo-classic.png" alt="">
+          <img src="img/yasuo.png" alt="">
 
         </div>
 
@@ -67,13 +67,17 @@
 
           <div class="film-text hidden">
 
-            <p>Titolo : {{movie.title}}</p>
-            <p>Titolo originale : {{movie.original_title}}</p>
+            <p>Titolo : <span>{{movie.title}}{{movie.name}}</span></p>
+            <p>Titolo originale : <span>{{movie.original_title}}{{movie.original_name}}</span></p>
             <img :src="'img/' + movie.original_language + '.png'" alt="">
-            <p>Voto : {{movie.vote_average}}</p>
+            <p>Voto :
+              <span v-for="i in star(movie.vote_average)" class="fas fa-star" style="color: yellow;"></span>
+              <span v-for="i in 5 - star(movie.vote_average)" class="fas fa-star"></span>
+              <span class="vote-number">{{movie.vote_average}}</span>
+            </p>
 
             <div class="film-text-trama">
-              <p>Trama : {{movie.overview}}</p>
+              <p>Trama : <span>{{movie.overview}}</span></p>
             </div>
 
           </div>

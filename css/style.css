@@ -46,6 +46,11 @@ header {
   cursor: pointer;
 }
 
+.header-menu ul li:hover {
+  transition: .3s ease;
+  color: #e50914;
+}
+
 .header-right {
   position: relative;
   justify-content: flex-end;
@@ -85,7 +90,7 @@ header {
 .box {
   margin: auto;
   height: 100%;
-  width: 94%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -134,6 +139,10 @@ header {
   padding-top: 10px;
 }
 
+.film-text span {
+  color: lightgrey;
+}
+
 .film-text img {
   width: 1.5rem;
   height: 1.5rem;
@@ -141,7 +150,12 @@ header {
   border: none;
 }
 
+.film-text .vote-number {
+  padding-left: 10px;
+}
+
 .film-text-trama {
-  height: 300px;
+  height: 250px;
+  margin-top: 10px;
   overflow-y: auto;
 }
